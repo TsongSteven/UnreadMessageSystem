@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title> Message Inbox Demo</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="col-sm-6">
+                    {% block body %}{% endblock %}
+                </div>
+                <div class="col-sm-6">
+                    <div class="panel-body">
+                        <div class="panel-header text-center">
+                            <h1>Message Inbox</h1>
+                        </div>
+                        <div class="panel-body">
+                            <div class="list-group">
+                            <a href="/viewmail" class="list-group-item"><span class="fa fa-envelope"></span> Inbox <span class="badge"> {{ count }}   </span>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

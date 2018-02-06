@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+	<div class="panel-header text-center">
+		<h1>Send Message</h1>
+	</div>
+	<div class="panel-body">
+		{% for flash_message in app.session.flashbag.get('notice') %}
+
+			<div class="alert alert-success">
+				{{flash_message}}
+			</div>
+
+		{% endfor %}
+		{{ form(message) }}
+	</div>
+{% endblock %}

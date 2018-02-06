@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+	<div class="text-center">
+		<h1>Messages</h1>
+	</div>
+	<div class="panel-body">
+		{% for mail in email %}
+			<h3>Message: {{ mail.message }} </h3>
+		{% endfor %}
+	</div>
+{% endblock %}
